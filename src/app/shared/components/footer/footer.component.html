@@ -1,0 +1,27 @@
+<!-- <ion-footer> -->
+<ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+
+        <ion-tab-button selected-tab="1" (click)="onTabChange('home')" [ngClass]="(tabValue==='home')?'tab-button-focus':''">
+            <ion-icon name="home"></ion-icon>
+            <ion-badge>6</ion-badge>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="onTabChange('info')" [ngClass]="(tabValue==='info')?'tab-button-focus':''">
+            <ion-icon name="person-circle"></ion-icon>
+            <ion-label>Info</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="onTabChange('map')" [ngClass]="(tabValue==='map')?'tab-button-focus':''">
+            <ion-icon name="map"></ion-icon>
+            <ion-label>Map</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [ngClass]="(tabValue==='menu')?'tab-button-focus':''">
+            <ion-icon name="menu" *ngIf="tabValue !== 'menu'" (click)="onTabChange('menu')"></ion-icon>
+            <ion-icon name="close" *ngIf="tabValue === 'menu'" (click)="onTabChange('close')"></ion-icon>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+</ion-tabs>

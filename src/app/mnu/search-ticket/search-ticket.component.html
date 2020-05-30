@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-buttons slot="start" style="color: black;">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>{{'SEARCH_TICKETS.LABEL.SEARCH_TICKETS' | translate}}</ion-title>
+      <ion-button routerLink="/menu/notification" routerDirection="root" style="color: black;" slot="end" fill="clear">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+  <ion-segment color="warning" (ionChange)="onSegmentChanged($event)" [(ngModel)]="segment" color="success">
+      <ion-segment-button value="0">
+          <ion-label>Bus</ion-label>
+          <ion-icon name="car-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="1">
+          <ion-label>Taxi</ion-label>
+          <ion-icon name="car-sport-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+          <ion-label>Ferry</ion-label>
+          <ion-icon name="basket-outline"></ion-icon>
+      </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content color="light">
+  <ion-slides #slides (ionSlideWillChange)="onSlideChange()">
+      <ion-slide>
+          <app-ticket-filters></app-ticket-filters>
+      </ion-slide>
+      <ion-slide>
+        <app-ticket-filters></app-ticket-filters>
+      </ion-slide>
+      <ion-slide>
+        <app-ticket-filters></app-ticket-filters>
+      </ion-slide>
+      
+  </ion-slides>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-slides #imgSlides>
+          <ion-slide>
+            <img src="assets/images/travel promot-01.jpg">
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/images/let go travel.jpg">
+          </ion-slide>
+          <ion-slide>
+              <img src="assets/images/time to travel.jpg">
+          </ion-slide>
+          
+      </ion-slides>
+  </ion-toolbar>
+</ion-footer>

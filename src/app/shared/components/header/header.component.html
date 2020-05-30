@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-buttons slot="start" style="color: black;" *ngIf="enabledMenu">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons (click)="onBtnBackClicked()" slot="start" *ngIf="!enabledMenu">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-buttons>
+      <ion-title>{{title}}</ion-title>
+      <ion-button routerLink="/menu/notification" routerDirection="root" style="color: black;" slot="end" fill="clear" *ngIf="enabledNotification">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>

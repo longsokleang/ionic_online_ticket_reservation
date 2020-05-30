@@ -1,0 +1,49 @@
+<ion-split-pane contentId="main-content">
+  <ion-menu contentId="main-content" type="overlay" (ionWillOpen)="renderMenu()">
+      <ion-header>
+      <ion-toolbar color="warning" *ngIf="!userInfo">
+          <ion-buttons slot="start" style="color: black;">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Welcome</ion-title>
+        </ion-toolbar>
+      <ion-toolbar  color="warning" *ngIf="userInfo">
+        <ion-avatar slot="start" *ngIf="userInfo?.profileImgUrl">
+          <img src="{{userInfo?.profileImgUrl}}">
+        </ion-avatar>
+        <ion-avatar class="round" slot="start" *ngIf="!userInfo?.profileImgUrl" >
+          <ion-label style="font-size: 36px; padding: 12px; color: white;">{{profileAvataAsLetter}}</ion-label>
+        </ion-avatar>
+
+          <ion-title>{{userInfo?.username}}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+    
+      <ion-content class="ion-padding">
+          <ion-list>            
+              <ion-menu-toggle auto-hide="false" *ngFor="let i of pages">
+                <ion-item (click)="onMenuClicked(i)" [routerLink]="i.url" lines="none" [ngClass]="(i.title == activeTitle)?'active': ''">
+                  {{i.title}}
+                  </ion-item>
+              </ion-menu-toggle>
+          </ion-list>
+        <!-- <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button> -->
+      </ion-content>
+      <ion-footer *ngIf="userInfo">
+        <ion-toolbar color="warning">
+          <!-- <ion-button  (click)="onClick()" fill="clear">
+            <ion-icon style="font-size: 24px; color: black;" name="log-out-outline"></ion-icon>
+            <ion-title>Logout</ion-title>
+          </ion-button> -->
+
+          <ion-buttons (click)="onBtnLogoutClicked()">
+            <ion-title >Logout</ion-title>
+            <button style="background-color: transparent;" ion-button icon-only >
+              <ion-icon style="font-size: 24px; color: black;" name="log-out-outline"></ion-icon>
+            </button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-footer>
+  </ion-menu>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>

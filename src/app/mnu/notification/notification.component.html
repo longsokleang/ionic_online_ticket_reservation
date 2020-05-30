@@ -1,0 +1,13 @@
+<app-header [title]="'Notification'" ></app-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let i of [0,1,2,3,4,5], let j = index">
+    <ion-card-header>
+      <ion-card-subtitle>Notification Title {{j + 1}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      This is notification content {{j + 1}}! <br> {{j + 1}} hours ago
+    </ion-card-content>
+  </ion-card>
+</ion-content>

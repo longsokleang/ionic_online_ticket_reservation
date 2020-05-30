@@ -1,0 +1,43 @@
+
+<ion-content  scroll-y="false" class="background">
+    <div style="padding-left: 20px; padding-top: 20px;">
+        <ion-button size="large" fill="clear" (click)="back()" style="color: black;">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+    </div>
+    
+    <div style="padding-top: 200px; padding-left: 20px; padding-right: 20px;">
+        <ion-row>
+            <ion-label style="font-size: 40px;">Need</ion-label>
+        </ion-row>
+        <ion-row>
+            <ion-label style="font-size: 60px;"><b>Vacation?</b></ion-label>
+        </ion-row>
+    </div>
+    <div style="padding: 20px;">
+        <ion-list class="background-input" style="margin-top: 30px;">
+            <ion-item>
+                <ion-label>Username</ion-label>
+                <ion-input class="ion-text-right" type="text" placeholder="username" [(ngModel)]="username" (ionChange)="checkValidation()"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-list class="background-input">
+            <ion-item>
+                <ion-label>Password</ion-label>
+                <ion-input class="ion-text-right" type="password" placeholder="password" [(ngModel)]="password" (ionChange)="checkValidation()"></ion-input>
+            </ion-item>
+        </ion-list>
+    
+        <ion-item lines="none" style="--background: transparence">
+            <ion-checkbox [disabled]="!username" style="--size: 20px; " [(ngModel)]="isRemember" (ionChange)="onCheckBoxChange()"></ion-checkbox>
+        <ion-label style="font-size: 14px;">Remember me</ion-label>
+        </ion-item>
+    
+        <ion-button [disabled]="!isBtnLoginEnable" style="--background: #FFFFFF; color: #404A69;" (click)="reqLogin()" expand="block" shape="round">
+            Login
+        </ion-button>
+        <ion-button style="--background: #404B6A; margin-top: 10px;" (click)="onBtnCreateAccountClicked()" expand="block"  shape="round">
+            Create an account
+        </ion-button>
+    </div>
+</ion-content>

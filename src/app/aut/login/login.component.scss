@@ -1,0 +1,44 @@
+// .header {
+//     --background: url('/assets/images/background01.png') no-repeat 100% 100%;
+// }
+
+.background {
+
+    --background: url('/assets/images/login-bg-02.jpg')  no-repeat cover fixed center;
+    background: url('/assets/images/login-bg-02.jpg') no-repeat fixed center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    padding: 30px;
+  }
+
+
+.background-input {
+    margin-bottom: 0!important;
+    ion-item {
+        --border-color: transparent!important;
+        --highlight-height: 0;
+        --background: none;
+        background: rgba(var(--ion-color-primary-rgb), 0.06);
+        border-radius: 4px;
+        ion-label {
+            color: #777!important;
+            font-weight: 300;
+            font-size: 1rem!important;
+        }
+        ion-input {
+            --color: #777;
+        }
+    }
+}
+
+.center {
+    padding-top: 200px;
+}
+
+.title {
+    padding-top: 150px;
+    font-size: 40px;
+    margin: 0px;
+    color: white;
+}

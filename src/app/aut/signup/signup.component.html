@@ -1,0 +1,31 @@
+<ion-content class="background">
+  <div style="padding-left: 20px; padding-top: 20px;">
+    <ion-button size="large" fill="clear" (click)="back()" style="color: black;">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+</div>
+  <div class="ion-content">
+    <ion-list class="background-input" style="margin-top: 30px;">
+      <ion-item>
+          <ion-label>Email/Phone</ion-label>
+          <ion-input  class="ion-text-right" type="text" placeholder="username" [(ngModel)]="username" (ionChange)="checkValidation()"></ion-input>
+      </ion-item>
+  </ion-list>
+  <ion-list class="background-input">
+      <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input  class="ion-text-right" type="password" placeholder="password" [(ngModel)]="password" (ionChange)="checkValidation()"></ion-input>
+      </ion-item>
+  </ion-list>
+  <ion-list class="background-input">
+      <ion-item>
+          <ion-label>Repeat Password</ion-label>
+          <ion-input class="ion-text-right" type="password" placeholder="repeat password" [(ngModel)]="password" (ionChange)="checkValidation()"></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <ion-button style="--background: #404B6A; margin-top: 40px; " (click)="onBtnCreateAccountClicked()" expand="block"  shape="round">
+      Create an account
+  </ion-button>
+  </div>
+</ion-content>

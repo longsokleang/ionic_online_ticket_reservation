@@ -1,0 +1,20 @@
+.active-item {
+    border-left: 80px solid var(--ion-color-primary);
+}
+
+.round { 
+    border-radius: 50%;  
+    margin: 3px;
+    // padding: 30px;
+    background: #30444A;
+}
+
+pre {
+    margin: 20px 0;
+    // padding: 20px;
+    background: #fafafa;
+  }
+
+.active {
+    --background: #FFC513;
+}
