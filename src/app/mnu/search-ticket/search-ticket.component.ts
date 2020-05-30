@@ -14,7 +14,8 @@ export class SearchTicketComponent implements OnInit {
   
   slideOpts = {
     initialSlide: 0,
-    speed: 400
+    speed: 400,
+    autoplay:true
   };  
 
   segment = 0;

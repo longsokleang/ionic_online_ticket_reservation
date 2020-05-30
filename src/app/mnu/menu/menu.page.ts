@@ -87,7 +87,7 @@ export class MenuPage implements OnInit {
     // if (i.title == 'Language') {
     //   DataCenter.set('menu', 'isFromMenu', true);
     // } 
-    if (i.title == 'Language' || i.title == 'Sign In' || i.title == 'My Account' || i.title == 'Setting' || i.title == 'BMB Reard' || i.title == 'My Trips') {
+    if (i.title == 'Language' || i.title == 'Sign In' || i.title == 'My Account' || i.title == 'Setting' || i.title == 'BMB Reward' || i.title == 'My Trips') {
       DataCenter.set('menu', 'isFromMenu', true);
       this.activeTitle = 'Search Ticket';
     }

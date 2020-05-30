@@ -1,1 +1,93 @@
 <app-header [title]="'My Trips'"></app-header>
+<ion-content fullscreen="true">
+    <ion-header>
+        <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="upcoming">
+                <ion-label>UPCOMING</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="past">
+                <ion-label>PAST</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-header>
+
+    <div *ngIf="segment == 'upcoming'">
+        <ion-card>
+            <ion-card-header>
+                <ion-card-subtitle>One way</ion-card-subtitle>
+                <ion-card-title>Phnom Penh -</ion-card-title>
+                <ion-card-title>Kompong Cham</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                    <ion-label>Date: 1/June/2020</ion-label>
+                </ion-row>
+                <ion-row>
+                    <ion-label>Time: 12:30 PM</ion-label>
+                </ion-row>
+                <ion-row>
+                    <ion-label>Your trip start in: <span style="color: red;">25h</span></ion-label>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div *ngIf="segment == 'past'">
+        <ion-card *ngFor="let i of [0,1,2,3,4,5]">
+            <ion-card-header>
+                <ion-card-subtitle>One way</ion-card-subtitle>
+                <ion-card-title>Phnom Penh -</ion-card-title>
+                <ion-card-title>Kompong Cham</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                    <ion-label>Date: 1/June/2020</ion-label>
+                </ion-row>
+                <ion-row>
+                    <ion-label>Time: 12:30 PM</ion-label>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+    <!-- <ion-slides #slides (ionSlideWillChange)="onSlideChange()">
+        <ion-slide >
+            <ion-item lines="none">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-subtitle>One way</ion-card-subtitle>
+                        <ion-card-title>Phnom Penh -</ion-card-title>
+                        <ion-card-title>Kompong Cham</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-row>
+                            <ion-label>Date: 1/June/2020</ion-label>
+                        </ion-row>
+                        <ion-row>
+                            <ion-label>Time: 12:30 PM</ion-label>
+                        </ion-row>
+                        <ion-row>
+                            <ion-label>Your trip start in: <span style="color: red;">25h</span></ion-label>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+            </ion-item>
+        </ion-slide>
+        <ion-slide>
+            <ion-card *ngFor="let i of [0,1,2,3,4,5]">
+                <ion-card-header>
+                    <ion-card-subtitle>One way</ion-card-subtitle>
+                    <ion-card-title>Phnom Penh -</ion-card-title>
+                    <ion-card-title>Kompong Cham</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-row>
+                        <ion-label>Date: 1/June/2020</ion-label>
+                    </ion-row>
+                    <ion-row>
+                        <ion-label>Time: 12:30 PM</ion-label>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides> -->
+</ion-content>

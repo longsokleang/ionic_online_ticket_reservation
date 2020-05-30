@@ -10,16 +10,19 @@
   </ion-toolbar>
   <ion-segment color="warning" (ionChange)="onSegmentChanged($event)" [(ngModel)]="segment" color="success">
       <ion-segment-button value="0">
+        <ion-img src="/assets/images/bus.png"></ion-img>
           <ion-label>Bus</ion-label>
-          <ion-icon name="car-outline"></ion-icon>
+          <!-- <ion-icon name="car-outline"></ion-icon> -->
       </ion-segment-button>
       <ion-segment-button value="1">
+        <ion-img src="/assets/images/taxi.png"></ion-img>
           <ion-label>Taxi</ion-label>
-          <ion-icon name="car-sport-outline"></ion-icon>
+          <!-- <ion-icon name="car-sport-outline"></ion-icon> -->
       </ion-segment-button>
       <ion-segment-button value="2">
+        <ion-img src="/assets/images/ship.png"></ion-img>
           <ion-label>Ferry</ion-label>
-          <ion-icon name="basket-outline"></ion-icon>
+          <!-- <ion-icon name="basket-outline"></ion-icon> -->
       </ion-segment-button>
   </ion-segment>
 </ion-header>
@@ -40,7 +43,7 @@
 
 <ion-footer>
   <ion-toolbar>
-      <ion-slides #imgSlides>
+      <ion-slides #imgSlides [options]="slideOpts">
           <ion-slide>
             <img src="assets/images/travel promot-01.jpg">
           </ion-slide>

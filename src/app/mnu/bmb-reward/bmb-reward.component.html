@@ -1,1 +1,47 @@
 <app-header [title]="'BMB Reward'"></app-header>
+
+<ion-content>
+    <ion-header>
+        <ion-segment color="warning" (ionChange)="onSegmentChanged($event)" [(ngModel)]="segment" color="success">
+            <ion-segment-button value="0">
+                <ion-label>Browse</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="1">
+                <ion-label>My reward</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="2">
+                <ion-label>Point History</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-header>
+
+    <div *ngIf="segment == 0">
+        <ion-card>
+            <ion-img src="/assets/images/temp01.jpg"></ion-img>
+            <ion-item lines="none">
+                <ion-img slot="start" src="/assets/images/map.png"></ion-img>
+                <ion-label>USD 1.00 Voucher <br><span><b>350 Points</b></span></ion-label>
+            </ion-item>
+        </ion-card>
+        <ion-card>
+            <ion-img src="/assets/images/temp01.jpg"></ion-img>
+            <ion-item lines="none">
+                <ion-img slot="start" src="/assets/images/map.png"></ion-img>
+                <ion-label>Get a cool Siem Reap t-shirt <br><span><b>300 Points</b></span></ion-label>
+            </ion-item>
+        </ion-card>
+    </div>
+    <div *ngIf="segment == 1">
+        <ion-title>Your reward will be <br>available here!</ion-title>
+    </div>
+    <div *ngIf="segment == 2">
+        <ion-item lines="none">
+            <ion-label>19 May 2010</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label>Completed survey <br>09:20 AM</ion-label>
+            <ion-label slot="end">+15</ion-label>
+            
+        </ion-item>
+    </div>
+</ion-content>

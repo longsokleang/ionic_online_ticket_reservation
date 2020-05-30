@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperationComponent implements OnInit {
 
-  constructor() { }
+  segment: number;
+
+  constructor() {
+    this.segment = 0;
+  }
 
   ngOnInit() {}
 

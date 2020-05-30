@@ -1,5 +1,74 @@
 <app-header [title]="'Operation'" [enabledMenu]="true"></app-header>
 
 <ion-content>
-  
+    <ion-header>
+        <ion-segment color="warning" (ionChange)="onSegmentChanged($event)" [(ngModel)]="segment" color="success">
+            <ion-segment-button value="0">
+              <ion-img src="/assets/images/bus.png"></ion-img>
+                <ion-label>Bus</ion-label>
+                <!-- <ion-icon name="car-outline"></ion-icon> -->
+            </ion-segment-button>
+            <ion-segment-button value="1">
+              <ion-img src="/assets/images/taxi.png"></ion-img>
+                <ion-label>Taxi</ion-label>
+                <!-- <ion-icon name="car-sport-outline"></ion-icon> -->
+            </ion-segment-button>
+            <ion-segment-button value="2">
+              <ion-img src="/assets/images/ship.png"></ion-img>
+                <ion-label>Ferry</ion-label>
+                <!-- <ion-icon name="basket-outline"></ion-icon> -->
+            </ion-segment-button>
+        </ion-segment>
+    </ion-header>
+    <div *ngIf="segment == 0">
+        <ion-card *ngFor="let i of [0]">
+            <ion-card-header>
+                <ion-card-subtitle>Cambotra Express</ion-card-subtitle>
+                <!-- <ion-card-title>Cambotra Express</ion-card-title> -->
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div *ngIf="segment == 1">
+        <ion-card *ngFor="let i of [0,1]">
+            <ion-card-header>
+                <ion-card-subtitle>Cambotra Express</ion-card-subtitle>
+                <!-- <ion-card-title>Cambotra Express</ion-card-title> -->
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div *ngIf="segment == 2">
+        <ion-card *ngFor="let i of [0,1,2]">
+            <ion-card-header>
+                <ion-card-subtitle>Cambotra Express</ion-card-subtitle>
+                <!-- <ion-card-title>Cambotra Express</ion-card-title> -->
+            </ion-card-header>
+            <ion-card-content>
+                <ion-row>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                  <ion-img src="/assets/images/star.png"></ion-img>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+    </div>
 </ion-content>

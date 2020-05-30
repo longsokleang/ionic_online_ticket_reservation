@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTripsComponent implements OnInit {
 
-  constructor() { }
+  segment: string;
+
+  constructor() {
+    this.segment = 'upcoming';
+  }
 
   ngOnInit() {}
 

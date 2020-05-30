@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { FooterComponent } from './components/footer/footer.component';
 import { TicketFiltersComponent } from './components/ticket-filters/ticket-filters.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SearchLocationsComponent } from './components/search-locations/search-locations.component';
 
 @NgModule({
   imports: [
@@ -15,17 +16,20 @@ import { HeaderComponent } from './components/header/header.component';
   declarations: [
       FooterComponent,
       TicketFiltersComponent,
-      HeaderComponent
+      HeaderComponent,
+      SearchLocationsComponent
   ],
   entryComponents: [
       FooterComponent,
       TicketFiltersComponent,
-      HeaderComponent
+      HeaderComponent,
+      SearchLocationsComponent
   ],
   exports: [
     FooterComponent,
     TicketFiltersComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchLocationsComponent
 
   ],
   providers: [

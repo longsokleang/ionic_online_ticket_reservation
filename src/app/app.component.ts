@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
     const lang = this.util.getSecureStorage('language');
     if (!lang) {
       this.translateService.setDefaultLang('en');
-      this.router.navigateByUrl('/auth/choose-language')
+      this.router.navigateByUrl('/login/choose-language')
     } else {
       this.translateService.setDefaultLang(lang);
       this.router.navigateByUrl('/menu')

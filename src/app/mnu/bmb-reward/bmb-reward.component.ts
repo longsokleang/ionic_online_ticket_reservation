@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BmbRewardComponent implements OnInit {
 
-  constructor() { }
+  segment: number;
+  constructor() { 
+    this.segment = 0;
+  }
 
   ngOnInit() {}
 
